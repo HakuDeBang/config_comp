@@ -84,7 +84,7 @@
                             </svg>
                             <span class="ml-3 text-sm md:text-base lg:text-lg text-bleulogo dark:text-lighttheme">Configurateur</span>
                         </a>
-                    </li>
+                    <!-- </li>
                     <li role="presentation">
                         <a href="#" id="ajouter-tab" data-tabs-target="#ajouter" role="tab" aria-controls="ajouter" aria-selected="false" type="button" class="flex items-center group">
                             <svg class="w-4 h-4 md:w-6 md:h-6 text-bleulogo dark:text-lighttheme" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +92,7 @@
                             </svg>
                             <span class="ml-3 text-sm md:text-base lg:text-lg text-bleulogo dark:text-lighttheme">Ajouter</span>
                         </a>
-                    </li>
+                    </li> -->
                     <!-- <li role="presentation">
                         <a href="#" id="modifier-tab" data-tabs-target="#modifier" role="tab" aria-controls="modifier" aria-selected="false" type="button" class="flex items-center group">
                             <svg class="w-4 h-4 md:w-6 md:h-6 text-bleulogo dark:text-lighttheme" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -122,280 +122,7 @@
             <div id="tabAdminContent">
 
                 <!-- Configurateur -->
-                <div class="hidden p-4" id="configurateur" role="tabpanel" aria-labelledby="configurateur-tab">
-                    <div class="mt-12 md:mt-16 lg:mt-20">
-                        <div class="flex flex-col justify-center items-center">
-                            <!-- Titre Configurateur -->
-                            <h2 class="w-3/4 lg:w-10/12 text-center font-bold uppercase mb-4 text-sm lg:text-base 2xl:text-lg text-darktheme dark:text-lighttheme">Choisissez parmis les options ci-dessous ou effectuez une recherche par mots-clefs</h2>
-                            <!-- Formulaire de recherche -->
-                            <form action="" method="post" class="w-3/4 lg:w-10/12 mb-4">
-                                <div class="flex flex-col lg:flex-row">
-                                    <!-- Dropdown Categorie button -->
-                                    <button id="dropdownCategorie" data-dropdown-toggle="dropdownRadioCategories" type="button" class="bg-lighttheme text-bleulogo font-medium rounded-lg text-sm px-2 py-0.5 text-center inline-flex items-center justify-center border-2 border-bleulogo lg:border-r lg:rounded-r-none dark:bg-darktheme dark:border-bleuclair dark:text-bleuclair">
-                                        Catégories
-                                        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                                        </svg>
-                                    </button>
-                                    <!-- Dropdown Categorie menu -->
-                                    <div id="dropdownRadioCategories" class="z-10 hidden w-48 bg-lighttheme rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/50 dark:bg-darktheme dark:border-bleuclair/60 dark:shadow-bleuclair/75">
-                                        <ul class="px-2 py-0.5 space-y-2 text-xs text-bleulogo dark:text-bleuclair" aria-labelledby="dropdownCategorie">
-                                            <li>
-                                                <div class="flex items-center">
-                                                    <input id="radioFormations" type="radio" value="" name="radioCategories" class="peer/radioFormations w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
-                                                    <label for="radioFormations" class="ml-2 text-sm font-medium peer-checked/radioFormations:text-valider peer-checked/radioFormations:dark:text-lighttheme">Formations</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="flex items-center">
-                                                    <input id="radioParcours" type="radio" value="" name="radioCategories" class="peer/radioParcours w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
-                                                    <label for="radioParcours" class="ml-2 text-sm font-medium peer-checked/radioParcours:text-valider peer-checked/radioParcours:dark:text-lighttheme">Parcours</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="flex items-center">
-                                                    <input id="radioBlocCompetences" type="radio" value="" name="radioCategories" class="peer/radioBlocCompetences w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
-                                                    <label for="radioBlocCompetences" class="ml-2 text-sm font-medium peer-checked/radioBlocCompetences:text-valider peer-checked/radioBlocCompetences:dark:text-lighttheme">Bloc de compétences</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="flex items-center">
-                                                    <input id="radioCompetences" type="radio" value="" name="radioCategories" class="peer/radioCompetences w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
-                                                    <label for="radioCompetences" class="ml-2 text-sm font-medium peer-checked/radioCompetences:text-valider peer-checked/radioCompetences:dark:text-lighttheme">Compétences</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="flex items-center"> 
-                                                    <input id="radioObjectifsOpe" type="radio" value="" name="radioCategories" class="peer/radioObjectifsOpe w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
-                                                    <label for="radioObjectifsOpe" class="ml-2 text-sm font-medium peer-checked/radioObjectifsOpe:text-valider peer-checked/radioObjectifsOpe:dark:text-lighttheme">Objectifs Opérationnels</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="flex items-center">
-                                                    <input id="radioObjectifsPeda" type="radio" value="" name="radioCategories" class="peer/radioObjectifsPeda w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
-                                                    <label for="radioObjectifsPeda" class="ml-2 text-sm font-medium peer-checked/radioObjectifsPeda:text-valider peer-checked/radioObjectifsPeda:dark:text-lighttheme">Objectifs Pédagogiques</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="flex items-center">
-                                                    <input id="radioActivites" type="radio" value="" name="radioCategories" class="peer/radioActivites w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
-                                                    <label for="radioActivites" class="ml-2 text-sm font-medium peer-checked/radioActivites:text-valider peer-checked/radioActivites:dark:text-lighttheme">Activités</label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="relative w-full">
-                                        <input type="search" id="search-dropdown" name="search-dropdown" class="block py-0.5 lg:py-2 w-full mt-2 lg:mt-0 z-20 text-sm text-darktheme placeholder:text-bleulogo/80 bg-lighttheme rounded-lg border-2 border-bleulogo lg:border-l lg:rounded-l-none dark:bg-darktheme dark:border-bleuclair dark:text-lighttheme dark:placeholder:text-bleuclair/80" placeholder="Recherche par mots-clefs">
-                                        <button type="submit" name="submit" class="absolute top-0 right-0 py-1.5 px-2 text-xs lg:text-sm mt-2 md:mt-1.5 lg:mt-1 font-medium text-bleulogo dark:text-bleuclair">
-                                            <svg aria-hidden="true" class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                                            </svg>
-                                            <span class="sr-only">Rechercher</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                            <!-- Titre des résultats de recherche -->
-                            <h2 class="w-3/4 lg:w-10/12 font-bold uppercase underline underline-offset-4 decoration-2 text-center text-sm lg:text-base text-bleulogo mb-4 dark:text-lighttheme dark:decoration-bleuclair">Liste des formations :</h2>
-                            <!-- Résultats en accordéon -->
-                            <div class="w-3/4 lg:w-10/12 border-b-2 border-bleulogo pb-4 dark:border-bleuclair">
-                                <!-- Accordéon Compétence 1 -->
-                                <div id="accordion-collapse-comp-1" data-accordion="collapse" class="flex flex-col justify-center">
-                                    <!-- Titre accordéon Compétence 1 -->
-                                    <h2 id="accordion-collapse-heading-comp-1" class="font-medium">
-                                        <!-- Button titre Compétence 1 / Button ajout au formulaire -->
-                                        <div class="flex flex-row justify-between items-center">
-                                            <!-- Button Titre -->
-                                            <button class="!bg-bleulogo flex flex-row items-center py-0.5 px-1.5 lg:py-1 lg:px-2 rounded-lg !text-lighttheme border-2 border-bleulogo dark:!bg-bleuclair dark:border-bleuclair dark:!text-darktheme basis-4/5" data-accordion-target="#accordion-collapse-body-comp-1" aria-expanded="false" aria-controls="accordion-collapse-body-comp-1">
-                                                <svg data-accordion-icon class="w-5 h-5 shrink-0 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                                </svg>
-                                                <span class="text-sm lg:text-base">Compétence 1 :</span>
-                                            </button>
-                                            <!-- Button ajout au formulaire -->
-                                            <button class="bg-bleulogo text-lighttheme rounded-full border-2 border-bleulogo py-0.5 px-0.5 dark:text-darktheme dark:bg-bleuclair dark:border-bleuclair">
-                                                <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9,17h6v6a1,1,0,0,0,2,0V17h6a1,1,0,0,0,0-2H17V9a1,1,0,0,0-2,0v6H9a1,1,0,0,0,0,2Z">
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </h2>
-                                    <!-- Corps accordéon Compétence 1 -->
-                                    <div id="accordion-collapse-body-comp-1" class="hidden" aria-labelledby="accordion-collapse-heading-comp-1">
-                                        <div class="flex flex-row justify-between items-center my-2 lg:my-3">
-                                            <!-- Titre corps Compétence 1 > Objectifs Opérationnel 1 -->
-                                            <div class="basis-3/4">
-                                                <p class="ml-4 text-darktheme text-xs lg:text-sm xl:text-base dark:text-lighttheme">
-                                                    <span class="border-l-2 border-bleulogo mr-2 dark:border-bleuclair"></span>
-                                                    Objectif Opérationnel 1
-                                                </p>
-                                            </div>
-                                            <!-- Button sélectionner Objectif Opérationnel 1 / Button modal Objectif Opérationnel 1 -->
-                                            <div class="flex flex-row basis-6 space-x-1 lg:space-x-2">
-                                                <!-- Button sélectionner Objectif Opérationnel 1 -->
-                                                <button class="bg-valider text-lighttheme rounded-md border-2 border-valider dark:border-valider">
-                                                    <svg class="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
-                                                        <path d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875 L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 Z" />
-                                                    </svg>
-                                                </button>
-                                                <!-- Button modal Objectif Opérationnel 1 -->
-                                                <button data-modal-target="modal-objectif-ope-1" data-modal-toggle="modal-objectif-ope-1" class="block text-lighttheme rounded-md bg-bleulogo border-2 border-bleulogo dark:bg-bleuclair dark:border-bleuclair dark:text-darktheme">
-                                                    <svg class="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px">
-                                                        <path d="M 12 2 C 10.343 2 9 3.343 9 5 C 9 6.657 10.343 8 12 8 C 13.657 8 15 6.657 15 5 C 15 3.343 13.657 2 12 2 z M 9 10 A 1.0001 1.0001 0 1 0 9 12 L 10 12 L 10 20 L 9 20 A 1.0001 1.0001 0 1 0 9 22 L 15 22 A 1.0001 1.0001 0 1 0 15 20 L 14 20 L 14 11 C 14 10.448 13.552 10 13 10 L 11 10 L 9 10 z" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <!-- Modal Objectif Opérationnel 1 -->
-                                            <div id="modal-objectif-ope-1" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto h-[calc(100%-1rem)] max-h-full">
-                                                <div class="relative w-3/4 max-w-md lg:max-w-xl 2xl:max-w-3xl max-h-full">
-                                                    <div class="relative bg-lighttheme rounded-lg shadow-md shadow-darktheme/60 dark:bg-darktheme dark:shadow-bleuclair/60">
-                                                        <!-- Modal header -->
-                                                        <div class="flex items-center justify-between p-3 border-b border-bleulogo dark:border-bleuclair">
-                                                            <h3 class="text-sm lg:text-base xl:text-lg font-semibold text-darktheme dark:text-lighttheme">Objectif Opérationnel 1</h3>
-                                                            <button type="button" class="text-darktheme bg-transparent rounded-lg text-base p-1.5 ml-auto inline-flex items-center dark:text-lighttheme" data-modal-hide="modal-objectif-ope-1">
-                                                                <svg aria-hidden="true" class="w-4 h-4 lg:w-5 lg:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                                                </svg>
-                                                                <span class="sr-only">Close modal</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- Modal body -->
-                                                        <form action="" method="post" class="p-3 space-y-3 overflow-y-auto max-h-64">
-                                                            <div class="flex flex-row justify-between items-center">
-                                                                <!-- Titre modal Objectif Opérationnel 1 > Objectif Pédagogique 1 -->
-                                                                <div class="basis-3/4">
-                                                                    <p id="objectif-peda-1" class="ml-2 text-xs lg:text-sm xl:text-base leading-relaxed text-darktheme/80 dark:text-lighttheme/80">
-                                                                        <span class="border-l-2 border-bleulogo mr-2 dark:border-bleuclair"></span>
-                                                                        Objectif Pédagogique 1
-                                                                    </p>
-                                                                </div>
-                                                                <!-- Button sélectionner Objectif Pédagogique 1 -->
-                                                                <button class="bg-valider text-lighttheme rounded-md border-2 border-valider mx-1.5 dark:border-valider">
-                                                                    <svg class="w-3 h-3 lg:w-4 lg:h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
-                                                                        <path d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875 L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 Z" />
-                                                                    </svg>
-                                                                </button>
-                                                            </div>
-                                                        </form>
-                                                        <!-- Modal footer -->
-                                                        <div class="flex justify-end items-center p-3 border-t border-bleulogo dark:border-bleuclair">
-                                                            <button data-modal-hide="modal-objectif-ope-1" type="button" class="bg-rougelogo text-lighttheme text-xs lg:text-sm xl:text-base font-medium px-1 py-0.5 rounded-md border-2 border-rougelogo">Annuler</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Titre récapitulatif des options sélectionnées -->
-                            <h2 class="w-3/4 lg:w-10/12 text-center text-sm font-bold uppercase my-4 text-darktheme dark:text-lighttheme">Récapitulatif des options sélectionnées</h2>
-                            <!-- Formulaire récapitulatif options sélectionnées -->
-                            <form action="" method="post" class="w-3/4 lg:w-10/12">
-                                <!-- Compétences -->
-                                <div class="mb-4">
-                                    <h3 class="text-darktheme text-center lg:text-left text-xs md:text-sm lg:text-base uppercase font-bold underline underline-offset-2 dark:text-lighttheme mb-1">Compétences :</h3>
-                                    <!-- Tableau Compétences -->
-                                    <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
-                                        <table class="w-full text-center">
-                                            <thead class="bg-bleulogo text-xs md:text-sm lg:text-base text-lighttheme uppercase dark:bg-bleuclair dark:text-darktheme">
-                                                <tr>
-                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th>
-                                                    <!-- <th class="px-2 py-1 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Référence</th> -->
-                                                    <th class="px-2 py-1.5">Option</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="bg-lighttheme dark:bg-darktheme">
-                                                    <th class="px-2 py-px text-xs md:text-sm lg:text-base text-darktheme border-r-2 border-darktheme/80 dark:text-lighttheme dark:border-bleuclair/80">
-                                                        Compétence 1
-                                                    </th>
-                                                    <td class="px-2 py-px">
-                                                        <button class="bg-rougelogo text-lighttheme rounded-md border-2 border-rougelogo py-px px-px">
-                                                            <svg class="w-3 h-3 lg:w-4 lg:h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px">
-                                                                <g id="Filled"><path d="M19,20V7H5v13c0,1.1,0.9,2,2,2h10C18.1,22,19,21.1,19,20z"/>
-                                                                    <rect x="4" y="3" width="16" height="2"/><polygon points="17,5 14,2 10,2 7,5 "/>
-                                                                </g>
-                                                            </svg>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <!-- Objectifs Opérationnels -->
-                                <div class="mb-4">
-                                    <h3 class="text-darktheme text-center lg:text-left text-xs md:text-sm lg:text-base uppercase font-bold underline underline-offset-2 dark:text-lighttheme mb-1">Objectifs Opérationnels :</h3>
-                                    <!-- Tableau Objectifs Opérationnels -->
-                                    <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
-                                        <table class="w-full text-center">
-                                            <thead class="bg-bleulogo text-xs md:text-sm lg:text-base text-lighttheme uppercase dark:bg-bleuclair dark:text-darktheme">
-                                                <tr>
-                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th>
-                                                    <!-- <th class="px-2 py-1 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Référence</th> -->
-                                                    <th class="px-2 py-1.5">Option</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="bg-lighttheme dark:bg-darktheme">
-                                                    <th class="px-2 py-px text-xs md:text-sm lg:text-base text-darktheme border-r-2 border-darktheme/80 dark:text-lighttheme dark:border-bleuclair/80">
-                                                        Objectif Opérationnel 1
-                                                    </th>
-                                                    <td class="px-2 py-px">
-                                                        <button class="bg-rougelogo text-lighttheme rounded-md border-2 border-rougelogo py-px px-px">
-                                                            <svg class="w-3 h-3 lg:w-4 lg:h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px">
-                                                                <g id="Filled"><path d="M19,20V7H5v13c0,1.1,0.9,2,2,2h10C18.1,22,19,21.1,19,20z"/>
-                                                                    <rect x="4" y="3" width="16" height="2"/><polygon points="17,5 14,2 10,2 7,5 "/>
-                                                                </g>
-                                                            </svg>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <!-- Objectifs Pédagogiques -->
-                                <div class="mb-4">
-                                    <h3 class="text-darktheme text-center lg:text-left text-xs md:text-sm lg:text-base uppercase font-bold underline underline-offset-2 dark:text-lighttheme mb-1">Objectifs Pédagogiques :</h3>
-                                    <!-- Tableau Objectifs Pédagogiques -->
-                                    <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
-                                        <table class="w-full text-center">
-                                            <thead class="bg-bleulogo text-xs md:text-sm lg:text-base text-lighttheme uppercase dark:bg-bleuclair dark:text-darktheme">
-                                                <tr>
-                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th>
-                                                    <!-- <th class="px-2 py-1 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Référence</th> -->
-                                                    <th class="px-2 py-1.5">Option</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="bg-lighttheme dark:bg-darktheme">
-                                                    <th class="px-2 py-px text-xs md:text-sm lg:text-base text-darktheme border-r-2 border-darktheme/80 dark:text-lighttheme dark:border-bleuclair/80">
-                                                        Objectif Pédagogique 1
-                                                    </th>
-                                                    <td class="px-2 py-px">
-                                                        <button class="bg-rougelogo text-lighttheme rounded-md border-2 border-rougelogo py-px px-px">
-                                                            <svg class="w-3 h-3 lg:w-4 lg:h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px">
-                                                                <g id="Filled"><path d="M19,20V7H5v13c0,1.1,0.9,2,2,2h10C18.1,22,19,21.1,19,20z"/>
-                                                                    <rect x="4" y="3" width="16" height="2"/><polygon points="17,5 14,2 10,2 7,5 "/>
-                                                                </g>
-                                                            </svg>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <!-- Button valider le formulaire -->
-                                <div class="flex items-center justify-end">
-                                    <button type="submit" name="submit" class="bg-bleulogo text-lighttheme px-1 py-0.5 rounded-md border-2 border-bleulogo uppercase text-xs md:text-sm lg:text-base dark:bg-bleuclair dark:border-bleuclair dark:text-darktheme">Créer la fiche diplôme</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <?php include 'configurateur.php'; ?>
 
                 <!-- Ajouter -->
                 <div class="hidden p-4" id="ajouter" role="tabpanel" aria-labelledby="ajouter-tab">
@@ -433,7 +160,7 @@
                                         <!-- Corps accordéon Formations - Parcours -->
                                         <div id="accordion-collapse-body-formations-parcours" class="hidden" aria-labelledby="accordion-collapse-heading-formations-parcours">
                                             <!-- Formulaire Formations -->
-                                            <form id="formFormation" action="" method="post" class="flex flex-col my-3 pb-4 space-y-3 border-b-2 border-darktheme/30 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
+                                            <!-- <form id="formFormation" action="" method="post" class="flex flex-col my-3 pb-4 space-y-3 border-b-2 border-darktheme/30 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez une formation</p>
                                                     <button id="dropdownFormation" data-dropdown-toggle="checkboxFormation" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -454,9 +181,9 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                             <!-- Formulaire Diplôme -->
-                                            <form id="formDiplome" action="" method="post" class="flex flex-col my-3 pb-4 space-y-3 border-b-2 border-darktheme/30 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
+                                            <!-- <form id="formDiplome" action="" method="post" class="flex flex-col my-3 pb-4 space-y-3 border-b-2 border-darktheme/30 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez un diplôme</p>
                                                     <button id="dropdownDiplome" data-dropdown-toggle="checkboxDiplome" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -477,9 +204,9 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                             <!-- Formulaire Lieux -->
-                                            <form id="formLieux" action="" method="post" class="flex flex-col my-3 pb-4 space-y-3 border-b-2 border-darktheme/30 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
+                                            <!-- <form id="formLieux" action="" method="post" class="flex flex-col my-3 pb-4 space-y-3 border-b-2 border-darktheme/30 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez un lieux</p>
                                                     <button id="dropdownLieux" data-dropdown-toggle="checkboxLieux" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -500,9 +227,9 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                             <!-- Formulaire Parcours -->
-                                            <form id="formParcours" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
+                                            <!-- <form id="formParcours" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez un parcours</p>
                                                     <button id="dropdownParcours" data-dropdown-toggle="checkboxParcours" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -523,7 +250,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                         </div>
                                     </div>
                                 </div>
@@ -545,7 +272,7 @@
                                         <!-- Corps accordéon Bloc de Compétences -->
                                         <div id="accordion-collapse-body-bloc-competences" class="hidden" aria-labelledby="accordion-collapse-heading-bloc-competences">
                                             <!-- Formulaire Bloc de Compétences -->
-                                            <form id="formBlocCompetences" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
+                                            <!-- <form id="formBlocCompetences" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez une formation</p>
                                                     <button id="dropdownBlocCompetences" data-dropdown-toggle="checkboxBlocCompetences" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -566,7 +293,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                         </div>
                                     </div>
                                 </div>
@@ -588,7 +315,7 @@
                                         <!-- Corps accordéon Compétences -->
                                         <div id="accordion-collapse-body-competences" class="hidden" aria-labelledby="accordion-collapse-heading-competences">
                                             <!-- Formulaire Compétences -->
-                                            <form id="formCompetences" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
+                                            <!-- <form id="formCompetences" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez une compétence</p>
                                                     <button id="dropdownCompetences" data-dropdown-toggle="checkboxCompetences" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -609,7 +336,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                         </div>
                                     </div>
                                 </div>
@@ -631,7 +358,7 @@
                                         <!-- Corps accordéon Objectifs Opérationnels -->
                                         <div id="accordion-collapse-body-objectif-ope" class="hidden" aria-labelledby="accordion-collapse-heading-objectif-ope">
                                             <!-- Formulaire Objectifs Opérationnels -->
-                                            <form id="formObjectifsOpe" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
+                                            <!-- <form id="formObjectifsOpe" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez un objectif opérationnel</p>
                                                     <button id="dropdownObjectifsOpe" data-dropdown-toggle="checkboxObjectifsOpe" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -652,7 +379,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                         </div>
                                     </div>
                                 </div>
@@ -674,7 +401,7 @@
                                         <!-- Corps accordéon Objectifs Pédagogiques -->
                                         <div id="accordion-collapse-body-objectifs-peda" class="hidden" aria-labelledby="accordion-collapse-heading-objectifs-peda">
                                             <!-- Formulaire Objectifs Pédagogiques -->
-                                            <form id="formObjectifsPeda" action="" method="post" class="flex flex-col my-3 pb-4 space-y-3 border-b-2 border-darktheme/30 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center dark:border-lighttheme/30">
+                                            <!-- <form id="formObjectifsPeda" action="" method="post" class="flex flex-col mt-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez un objectif pédagogique</p>
                                                     <button id="dropdownObjectifsPeda" data-dropdown-toggle="checkboxObjectifsPeda" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -695,7 +422,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                         </div>
                                     </div>
                                 </div>
@@ -717,7 +444,7 @@
                                         <!-- Corps accordéon Activités -->
                                         <div id="accordion-collapse-body-activites" class="hidden" aria-labelledby="accordion-collapse-heading-activites">
                                             <!-- Formulaire Activités -->
-                                            <form id="formActivites" action="" method="post" class="flex flex-col my-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
+                                            <!-- <form id="formActivites" action="" method="post" class="flex flex-col my-3 space-y-3 lg:space-y-0 lg:flex-none lg:grid lg:grid-cols-2 lg:items-center">
                                                 <div class="flex flex-col space-y-1">
                                                     <p class="font-bold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme">Choisissez une activité</p>
                                                     <button id="dropdownActivites" data-dropdown-toggle="checkboxActivites" type="button" class="flex flex-row items-center justify-between w-full lg:w-64 xl:w-72 2xl:w-96 border-2 border-bleulogo px-1 py-0.5 lg:px-1.5 lg:py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base text-bleulogo dark:text-lighttheme dark:border-bleuclair">
@@ -738,7 +465,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                         </div>
                                     </div>
                                 </div>
@@ -751,13 +478,13 @@
                                 <div class="mb-4">
                                     <h3 class="text-darktheme text-center lg:text-left text-xs md:text-sm lg:text-base uppercase font-bold underline underline-offset-2 dark:text-lighttheme mb-1">Formations :</h3>
                                     <!-- Tableau Formations -->
-                                    <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
+                                    <!-- <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
                                         <table class="w-full text-center">
                                             <thead class="bg-bleulogo text-xs md:text-sm lg:text-base text-lighttheme uppercase dark:bg-bleuclair dark:text-darktheme">
                                                 <tr>
-                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th>
+                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th> -->
                                                     <!-- <th class="px-2 py-1 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Référence</th> -->
-                                                    <th class="px-2 py-1.5">Option</th>
+                                                    <!-- <th class="px-2 py-1.5">Option</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -777,20 +504,20 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <!-- Parcours -->
                                 <div class="mb-4">
                                     <h3 class="text-darktheme text-center lg:text-left text-xs md:text-sm lg:text-base uppercase font-bold underline underline-offset-2 dark:text-lighttheme mb-1">Parcours :</h3>
                                     <!-- Tableau Parcours -->
-                                    <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
+                                    <!-- <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
                                         <table class="w-full text-center">
                                             <thead class="bg-bleulogo text-xs md:text-sm lg:text-base text-lighttheme uppercase dark:bg-bleuclair dark:text-darktheme">
                                                 <tr>
-                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th>
+                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th> -->
                                                     <!-- <th class="px-2 py-1 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Référence</th> -->
-                                                    <th class="px-2 py-1.5">Option</th>
+                                                    <!-- <th class="px-2 py-1.5">Option</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -810,20 +537,20 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <!-- Bloc de Compétences -->
                                 <div class="mb-4">
                                     <h3 class="text-darktheme text-center lg:text-left text-xs md:text-sm lg:text-base uppercase font-bold underline underline-offset-2 dark:text-lighttheme mb-1">Bloc de Compétences :</h3>
                                     <!-- Tableau Bloc de Compétences -->
-                                    <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
+                                    <!-- <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
                                         <table class="w-full text-center">
                                             <thead class="bg-bleulogo text-xs md:text-sm lg:text-base text-lighttheme uppercase dark:bg-bleuclair dark:text-darktheme">
                                                 <tr>
-                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th>
+                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th> -->
                                                     <!-- <th class="px-2 py-1 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Référence</th> -->
-                                                    <th class="px-2 py-1.5">Option</th>
+                                                    <!-- <th class="px-2 py-1.5">Option</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -843,7 +570,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <!-- Compétences -->
@@ -949,13 +676,13 @@
                                 <div class="mb-4">
                                     <h3 class="text-darktheme text-center lg:text-left text-xs md:text-sm lg:text-base uppercase font-bold underline underline-offset-2 dark:text-lighttheme mb-1">ActivitéS :</h3>
                                     <!-- Tableau Activité -->
-                                    <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
+                                    <!-- <div class="relative overflow-x-auto mb-2 rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/40 dark:border-bleuclair dark:shadow-bleuclair/40">
                                         <table class="w-full text-center">
                                             <thead class="bg-bleulogo text-xs md:text-sm lg:text-base text-lighttheme uppercase dark:bg-bleuclair dark:text-darktheme">
                                                 <tr>
-                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th>
+                                                    <th scope="col" class="px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Intitulé</th> -->
                                                     <!-- <th class="px-2 py-1 border-r-2 border-lighttheme/80 dark:border-darktheme/80">Référence</th> -->
-                                                    <th class="px-2 py-1.5">Option</th>
+                                                    <!-- <th class="px-2 py-1.5">Option</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -975,7 +702,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <!-- Button popup valider l'ajout -->
                                 <div class="flex items-center justify-end">
