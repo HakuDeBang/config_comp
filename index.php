@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require_once 'controller/homeController.php';
 if(isset($_GET['action']) && $_GET['action'] !== '' && !isset($_GET['admin']))
@@ -9,8 +8,11 @@ if(isset($_GET['action']) && $_GET['action'] !== '' && !isset($_GET['admin']))
         case 'Homepage':
             homepage();
             break;
+        case 'Login':
+            login();
+            break;
         default:
-            homepage();
+            loginForm();
             break;
     }
 }
@@ -22,7 +24,7 @@ else
     }
     else
     {
-        homepage();
+        loginForm();
     }
 }
 
