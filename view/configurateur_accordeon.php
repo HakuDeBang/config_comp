@@ -1,7 +1,7 @@
 <!-- Titre des résultats de recherche -->
 <h2 class="w-3/4 lg:w-10/12 font-bold uppercase underline underline-offset-4 decoration-2 text-center text-sm lg:text-base text-bleulogo mb-4 dark:text-lighttheme dark:decoration-bleuclair">Liste des compétences :</h2>
 <!-- Résultat en accordéon -->
-<div class="w-3/4 lg:w-10/12 space-y-4 border-b-2 border-bleulogo pb-4 dark:border-bleuclair">
+<div class="w-3/4 lg:w-10/12 space-y-4 border-b-4 border-bleulogo pb-4 dark:border-bleuclair">
     <!-- Accordéon Compétence -->
     <?php foreach($competencesData as $competences){ ?>
         <div id="accordion-collapse-comp-<?= $competences->getIdCompetences();?>" data-accordion="collapse" class="flex flex-col justify-center">

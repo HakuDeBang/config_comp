@@ -1,5 +1,5 @@
 <!-- Titre récapitulatif des options sélectionnées -->
-<h2 class="w-3/4 lg:w-10/12 text-center text-sm font-bold uppercase my-4 text-darktheme dark:text-lighttheme">Récapitulatif des options sélectionnées</h2>
+<h2 class="w-3/4 lg:w-10/12 text-center font-bold uppercase my-4 text-sm lg:text-base 2xl:text-lg text-darktheme dark:text-lighttheme">Récapitulatif des options sélectionnées</h2>
 <!-- Formulaire récapitulatif options sélectionnées -->
 <form action="index.php?action=FormulaireConfigurateur" id="formRecapConfig" method="post" class="w-3/4 lg:w-10/12">
     <div class="mb-4" id="competencesTable">
