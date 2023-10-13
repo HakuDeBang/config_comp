@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
         thHidden.className = 'hidden';
         theadRow.appendChild(thHidden);
 
+        const thReference = document.createElement('th');
+        thReference.scope = 'col';
+        thReference.className = 'px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80';
+        thReference.textContent = 'Référence';
+        theadRow.appendChild(thReference);
+
         const thIntitule = document.createElement('th');
         thIntitule.scope = 'col';
         thIntitule.className = 'px-2 py-1.5 border-r-2 border-lighttheme/80 dark:border-darktheme/80';
@@ -45,17 +51,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedObjPedaContainer = document.getElementById('selected-obj-peda-container');
     selectedObjPedaContainer.appendChild(objectifsPedaTable);
 
-    function addSelectedItem(label, id, table) {
+    function addSelectedItem(reference, label, id, table) {
 
         const tbody = table.querySelector('tbody');
         const newRow = tbody.insertRow();
         newRow.id = `row-${id}`;
 
-        const thCell = newRow.insertCell(0);
-        thCell.className = 'px-2 py-2 text-left text-xs md:text-sm lg:text-base text-darktheme border-r-2 border-b border-darktheme/80 dark:text-lighttheme dark:border-bleuclair/60';
-        thCell.textContent = label;
+        const thCellReference = newRow.insertCell(0);
+        thCellReference.className = 'px-2 py-2 text-center lg:text-left text-xs md:text-sm lg:text-base text-darktheme border-r-2 border-b border-darktheme/80 dark:text-lighttheme dark:border-bleuclair/60';
+        thCellReference.textContent = reference;
 
-        const tdCell = newRow.insertCell(1);
+        const thCellLabel = newRow.insertCell(1);
+        thCellLabel.className = 'px-2 py-2 text-center lg:text-left text-xs md:text-sm lg:text-base text-darktheme border-r-2 border-b border-darktheme/80 dark:text-lighttheme dark:border-bleuclair/60';
+        thCellLabel.textContent = label;
+
+        const tdCell = newRow.insertCell(2);
         tdCell.className = 'px-2 py-2 border-b border-darktheme/80 dark:border-bleuclair/80';
         const deleteButton = document.createElement('button');
         deleteButton.className = 'bg-rougelogo text-lighttheme rounded-md border-2 border-rougelogo py-px px-px';
@@ -87,8 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleSelection(event, table) {
         const target = event.currentTarget;
-        
         // console.log(target);
+        const reference = target.getAttribute('data-reference');
+        // console.log(reference);
         const label = target.getAttribute('data-label');
         // console.log(label);
         const id = target.getAttribute('data-id');
@@ -99,15 +110,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // console.log(targetType);
         
         if (table === competencesTable && targetType === 'competencesData') {
-            addSelectedItem(label, id, table);
+            addSelectedItem(reference, label, id, table);
         } else if (table === objectifsOpeTable && targetType === 'objectifsOpeData') {
-            const parentLabel = document.querySelector(`[data-id="${parentId}"]`).getAttribute('data-label');
-            addSelectedItem(`${parentLabel} -> ${label}`, id, table);
+            const parentReference = document.querySelector(`[data-id="${parentId}"]`).getAttribute('data-reference');
+            addSelectedItem(`${parentReference} => ${reference}`, `${label}`, id, table);
         } else if (table === objectifsPedaTable && targetType === 'objectifsPedaData') {
-            const parentLabel = document.querySelector(`[data-id="${parentId}"]`).getAttribute('data-label');
+            const parentReference = document.querySelector(`[data-id="${parentId}"]`).getAttribute('data-reference');
             const grandParentId = document.querySelector(`[data-id="${parentId}"]`).getAttribute('data-parent-id');
-            const grandParentLabel = document.querySelector(`[data-id="${grandParentId}"]`).getAttribute('data-label');
-            addSelectedItem(`${grandParentLabel} -> ${parentLabel} -> ${label}`, id, table);
+            const grandParentReference = document.querySelector(`[data-id="${grandParentId}"]`).getAttribute('data-reference');
+            addSelectedItem(`${grandParentReference} => ${parentReference} => ${reference}`, `${label}`, id, table);
         }
     }
 

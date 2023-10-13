@@ -24,6 +24,7 @@ class CompetencesRepository extends Connect
         {
             $competence = new Competence(
                 $compsData['id_competences'],
+                $compsData['reference_competences'],
                 $compsData['intitule_competences']
             );
             $competences[] = $competence;
@@ -33,8 +34,8 @@ class CompetencesRepository extends Connect
 
     public function getCompetenceByid(int $competenceId)
     {
-        $req_sel = $this->conn->prepare("SELECT * FROM competences WHERE id_competences = :id");
-        $req_sel->bindParam(":id", $competenceId, PDO::PARAM_INT);
+        $req_sel = $this->conn->prepare("SELECT * FROM competences WHERE id_competences = :id_competences");
+        $req_sel->bindParam(":id_competences", $competenceId, PDO::PARAM_INT);
         $req_sel->execute();
         $compsData = $req_sel->fetch(PDO::FETCH_ASSOC);
 
@@ -47,6 +48,7 @@ class CompetencesRepository extends Connect
         // On crée un nouvel objet competences et on le retourne
         $competence = new Competence(
             $compsData['id_competences'],
+            $compsData['reference_competences'],
             $compsData['intitule_competences']
         );
         return $competence;
@@ -63,8 +65,8 @@ class CompetencesRepository extends Connect
          * Comparaison de l'id_competences entre la table Classer et l'id_competences de la table Compétences, récupéré dans la requête précedente
          */
         $req_sel = $this->conn->prepare("SELECT oo.* FROM objectifs_operationnels oo
-                                        INNER JOIN classer cl ON oo.id_objectifs_operationnels = cl.id_objectifs_operationnels
-                                        WHERE cl.id_competences = :id_competences");
+                                        INNER JOIN competences_objope coo ON oo.id_objectifs_operationnels = coo.id_objectifs_operationnels
+                                        WHERE coo.id_competences = :id_competences");
         /**
          * bindParam permet d'éviter les problèmes de sécurités liées aux injections SQL
          * Permet de lier la variable $id_competences, au paramètre :id_competences dans la requête
@@ -82,6 +84,7 @@ class CompetencesRepository extends Connect
             // On crée un nouvel Objectif Opérationnel avec les données de la BDD
             $objectifOpe = new ObjectifOpe(
                 $objOpeData['id_objectifs_operationnels'],
+                $objOpeData['reference_objectifs_operationnels'],
                 $objOpeData['intitule_objectifs_operationnels']
             );
             // On ajoute l'Objectif Opérationnel au tableau
@@ -123,7 +126,7 @@ class CompetencesRepository extends Connect
     public function delCompetences(int $id_competences)
     {
         // Requête préparée pour supprimer le lien dans la table Classer entre Compétences et Objectifs Opérationnels
-        $req_del_lien = $this->conn->prepare("DELETE FROM classer WHERE id_competences = ?");
+        $req_del_lien = $this->conn->prepare("DELETE FROM competences_objope WHERE id_competences = ?");
         // Execution de la requête supprimant l'ID de la compétence dans la table de relation Classer
         $req_del_lien->execute([$id_competences]);
 
@@ -136,10 +139,10 @@ class CompetencesRepository extends Connect
     /**
      * LIER OBJECTIFS OPE A COMPETENCES
      */
-    public function addObjectifOpeToCompetence($id_competences, $id_objectifs_operationnels)
+    public function addObjOpeToCompetence($id_competences, $id_objectifs_operationnels)
     {
-        // Requête préparée pour faire le lien en les ID des compétences et des objectifs opérationnels
-        $req_ins = $this->conn->prepare("INSERT INTO classer (id_competences, id_objectifs_operationnels) VALUES (?, ?)");
+        // Requête préparée pour faire le lien entre les ID des compétences et des objectifs opérationnels
+        $req_ins = $this->conn->prepare("INSERT INTO competences_objope (id_competences, id_objectifs_operationnels) VALUES (?, ?)");
         // Execution de la requête insérant les id_competences et id_objectifs_operationnels dans la table Classer
         $req_ins->execute([$id_competences, $id_objectifs_operationnels]);
     }
