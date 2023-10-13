@@ -24,6 +24,11 @@ class Connect
             echo "Connexion échouée : " . $e->getMessage();
         }
     }
+
+    public function getConnection()
+    {
+        return $this->conn;
+    }
 }
 
 ?>

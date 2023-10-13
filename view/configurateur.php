@@ -1,4 +1,4 @@
-<div class="hidden p-4" id="configurateur" role="tabpanel" aria-labelledby="configurateur-tab">
+<div class="p-4" id="configurateur" role="tabpanel" aria-labelledby="configurateur-tab">
     <div class="mt-12 md:mt-16 lg:mt-20">
         <div class="flex flex-col justify-center items-center">
             <!-- Titre Configurateur -->
@@ -16,24 +16,24 @@
                     <!-- Dropdown Categorie menu -->
                     <div id="dropdownRadioCategories" class="z-10 hidden w-48 bg-lighttheme rounded-lg border-2 border-bleulogo shadow-md shadow-bleulogo/50 dark:bg-darktheme dark:border-bleuclair/60 dark:shadow-bleuclair/75">
                         <ul class="px-2 py-0.5 space-y-2 text-xs text-bleulogo dark:text-bleuclair" aria-labelledby="dropdownCategorie">
-                            <li>
+                            <!-- <li>
                                 <div class="flex items-center">
                                     <input id="radioFormations" type="radio" value="" name="radioCategories" class="peer/radioFormations w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
                                     <label for="radioFormations" class="ml-2 text-sm font-medium peer-checked/radioFormations:text-valider peer-checked/radioFormations:dark:text-lighttheme">Formations</label>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <div class="flex items-center">
                                     <input id="radioParcours" type="radio" value="" name="radioCategories" class="peer/radioParcours w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
                                     <label for="radioParcours" class="ml-2 text-sm font-medium peer-checked/radioParcours:text-valider peer-checked/radioParcours:dark:text-lighttheme">Parcours</label>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <div class="flex items-center">
                                     <input id="radioBlocCompetences" type="radio" value="" name="radioCategories" class="peer/radioBlocCompetences w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
                                     <label for="radioBlocCompetences" class="ml-2 text-sm font-medium peer-checked/radioBlocCompetences:text-valider peer-checked/radioBlocCompetences:dark:text-lighttheme">Bloc de compétences</label>
                                 </div>
-                            </li>
+                            </li> -->
                             <li>
                                 <div class="flex items-center">
                                     <input id="radioCompetences" type="radio" value="" name="radioCategories" class="peer/radioCompetences w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
@@ -52,12 +52,12 @@
                                     <label for="radioObjectifsPeda" class="ml-2 text-sm font-medium peer-checked/radioObjectifsPeda:text-valider peer-checked/radioObjectifsPeda:dark:text-lighttheme">Objectifs Pédagogiques</label>
                                 </div>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <div class="flex items-center">
                                     <input id="radioActivites" type="radio" value="" name="radioCategories" class="peer/radioActivites w-3 h-3 text-valider bg-lighttheme border-bleulogo focus:ring-0 dark:bg-darktheme dark:text-bleuclair dark:border-bleuclair dark:focus:ring-offset-0">
                                     <label for="radioActivites" class="ml-2 text-sm font-medium peer-checked/radioActivites:text-valider peer-checked/radioActivites:dark:text-lighttheme">Activités</label>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="relative w-full">
@@ -71,12 +71,12 @@
                     </div>
                 </div>
             </form>
+
             <!-- Accordéon Configurateur -->
             <?php include 'configurateur_accordeon.php'; ?>
             
             <!-- Tableau Configurateur -->
             <?php include 'configurateur_tableau.php'; ?>
-            
         </div>
     </div>
 </div>
